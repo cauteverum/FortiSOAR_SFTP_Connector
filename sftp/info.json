@@ -1,0 +1,157 @@
+{
+  "name": "sftp",
+  "label": "SFTP",
+  "version": "1.0.0",
+  "description": "Secure ftp",
+  "publisher": "Community",
+  "cs_approved": false,
+  "cs_compatible": true,
+  "category": "",
+  "icon_small_name": "120485-OQCOLE-465.png",
+  "icon_large_name": "120485-OQCOLE-465.png",
+  "help_online": "",
+  "configuration": {
+    "fields": [
+      {
+        "name": "host",
+        "title": "Host",
+        "type": "text",
+        "editable": true,
+        "visible": true,
+        "required": true,
+        "description": "IP",
+        "isOnChange": false,
+        "onchange": {}
+      },
+      {
+        "name": "username",
+        "title": "Username",
+        "type": "text",
+        "editable": true,
+        "visible": true,
+        "required": true,
+        "description": "Username",
+        "isOnChange": false,
+        "onchange": {}
+      },
+      {
+        "name": "password",
+        "title": "Password",
+        "type": "password",
+        "editable": true,
+        "visible": true,
+        "required": true,
+        "description": "Password",
+        "isOnChange": false,
+        "onchange": {}
+      }
+    ]
+  },
+  "operations": [
+    {
+      "operation": "get_file",
+      "title": "Get File",
+      "annotation": "get_file",
+      "description": "Download File",
+      "category": "investigation",
+      "is_config_required": true,
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "localpath",
+          "title": "localpath",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "description": "Local Path",
+          "isOnChange": false,
+          "onchange": {}
+        },
+        {
+          "name": "remotepath",
+          "title": "remotepath",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "description": "Remote path",
+          "isOnChange": false,
+          "onchange": {}
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "put_file",
+      "title": "Put File",
+      "annotation": "put_file",
+      "description": "Upload File",
+      "category": "investigation",
+      "is_config_required": true,
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "localpath",
+          "title": "localpath",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "description": "Local path",
+          "isOnChange": false,
+          "onchange": {}
+        },
+        {
+          "name": "remotepath",
+          "title": "remotepath",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "description": "Remote path",
+          "isOnChange": false,
+          "onchange": {}
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_folder",
+      "title": "Get Folder",
+      "annotation": "get_folder",
+      "description": "Includes only files under folder not operates recursively",
+      "category": "investigation",
+      "is_config_required": true,
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "remotepath",
+          "title": "remotepath",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "description": "Remote Path",
+          "isOnChange": false,
+          "onchange": {}
+        },
+        {
+          "name": "localpath",
+          "title": "localpath",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "description": "Local Path",
+          "isOnChange": false,
+          "onchange": {}
+        }
+      ],
+      "output_schema": {}
+    }
+  ]
+}
